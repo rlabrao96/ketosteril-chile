@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ketosteril® · Programa de Acompañamiento — Fresenius Kabi</title>
+  <meta name="description" content="Programa de seguimiento renal especializado para pacientes con Ketosteril®. Derivación directa a Contact Center.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Figtree', 'system-ui', 'sans-serif'] },
+          colors: {
+            'fk-blue': '#003781',
+            'fk-blue-deep': '#002257',
+            'fk-blue-soft': '#1E5BB8',
+            'fk-blue-mist': '#E8EEF9',
+            'fk-orange': '#F39200',
+            'ink-900': '#0F172A',
+            'ink-700': '#334155',
+            'ink-500': '#64748B',
+            'ink-400': '#94A3B8',
+            'bg-soft': '#F7F9FC',
+            'border-soft': '#E2E8F0',
+            'border-strong': '#CBD5E1',
+            'success': '#059669',
+            'danger': '#DC2626'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-ink-900 antialiased">
+  <a href="#hero" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[200] focus:bg-fk-blue focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">
+    Saltar al contenido
+  </a>
+  <header id="navbar" class="sticky top-0 z-50">
+<nav class="bg-white border-b border-border-soft transition-shadow" id="nav-bar">
+  <div class="max-w-7xl mx-auto px-8 h-[72px] flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-2">
+      <img src="assets/ketosteril-wordmark-hq.png" alt="Ketosteril" class="h-7 w-auto">
+      <span class="text-xs text-ink-500 hidden lg:inline-block border-l border-border-soft pl-2 ml-1">Aminoácidos y/o cetoanálogos</span>
+    </a>
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-700">
+      <li><a href="#hero" class="hover:text-fk-blue transition-colors duration-200">Resumen</a></li>
+      <li><a href="#como-funciona" class="hover:text-fk-blue transition-colors duration-200">El programa</a></li>
+      <li><a href="#que-incluye" class="hover:text-fk-blue transition-colors duration-200">Para pacientes</a></li>
+      <li><a href="#beneficios" class="hover:text-fk-blue transition-colors duration-200">Recursos</a></li>
+      <li><a href="#contact-center" class="hover:text-fk-blue transition-colors duration-200">Contacto</a></li>
+    </ul>
+    <a href="#formulario" class="inline-flex items-center gap-2 bg-fk-blue hover:bg-fk-blue-deep text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fk-blue focus-visible:ring-offset-2">
+      <i data-lucide="user-round" class="w-4 h-4"></i>
+      Solicitar contacto
+    </a>
+  </div>
+</nav>
+</header>
+  <main>
+    <section id="hero" class="hero-atmosphere relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-8 py-12 lg:py-16 grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-12 items-center relative z-10">
+    <div class="space-y-5">
+      <p class="eyebrow stagger-1">Programa de acompañamiento</p>
+      <h1 class="display stagger-2">
+        Más que un tratamiento,<br>
+        <span class="text-fk-blue">un programa de acompañamiento</span>
+      </h1>
+      <p class="text-lg text-ink-700 max-w-xl leading-relaxed stagger-3">
+        Seguimiento renal especializado para asegurar la adherencia y continuidad
+        del tratamiento con Ketosteril<sup>®</sup>.
+      </p>
+      <div class="inline-flex items-center gap-2 bg-fk-blue-mist text-fk-blue text-sm font-medium px-4 py-2 rounded-full stagger-4">
+        <i data-lucide="badge-check" class="w-4 h-4"></i>
+        Avalado por +25 estudios clínicos publicados
+      </div>
+      <div class="flex flex-wrap gap-3 pt-2 stagger-5">
+        <a href="#formulario" class="inline-flex items-center gap-2 bg-fk-blue hover:bg-fk-blue-deep text-white font-semibold px-6 py-3.5 rounded-lg transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fk-blue focus-visible:ring-offset-2">
+          Derivar paciente
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="#como-funciona" class="inline-flex items-center gap-2 bg-white hover:bg-bg-soft border border-border-strong text-ink-900 font-semibold px-6 py-3.5 rounded-lg transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fk-blue focus-visible:ring-offset-2">
+          Conocer el programa
+        </a>
+      </div>
+    </div>
+    <div class="relative stagger-6">
+      <img src="assets/hero-doctor-patient.png"
+           alt="Médico nefrólogo conversando con paciente"
+           class="w-full h-auto rounded-2xl shadow-[var(--shadow-elevated)]">
+    </div>
+  </div>
+</section>
+    <section id="como-funciona" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-8">
+    <h2 class="h2 text-center mb-3">¿Cómo funciona?</h2>
+    <p class="text-center text-ink-500 max-w-2xl mx-auto mb-12">
+      Un flujo simple de cinco pasos desde la prescripción hasta el seguimiento continuo.
+    </p>
+
+    <div class="stepper relative">
+      <div class="stepper-line absolute top-7 left-0 right-0 h-0.5 bg-border-soft" aria-hidden="true">
+        <div class="stepper-line-fill h-full bg-fk-blue transition-[width] duration-1000 ease-out" style="width:0%"></div>
+      </div>
+      <ol class="relative grid grid-cols-5 gap-4">
+        <li class="text-center">
+          <div class="mx-auto w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10">1</div>
+          <i data-lucide="file-pen-line" class="w-5 h-5 text-fk-blue-soft mx-auto mt-3"></i>
+          <h3 class="mt-2 font-semibold text-ink-900">Prescripción</h3>
+          <p class="text-sm text-ink-500 mt-1">Del médico tratante</p>
+        </li>
+        <li class="text-center">
+          <div class="mx-auto w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10">2</div>
+          <i data-lucide="users" class="w-5 h-5 text-fk-blue-soft mx-auto mt-3"></i>
+          <h3 class="mt-2 font-semibold text-ink-900">Derivación</h3>
+          <p class="text-sm text-ink-500 mt-1">A Especialista / Contact Center</p>
+        </li>
+        <li class="text-center">
+          <div class="mx-auto w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10">3</div>
+          <i data-lucide="clipboard-list" class="w-5 h-5 text-fk-blue-soft mx-auto mt-3"></i>
+          <h3 class="mt-2 font-semibold text-ink-900">Evaluación Nutricional</h3>
+          <p class="text-sm text-ink-500 mt-1">Por Nutricionista Renal</p>
+        </li>
+        <li class="text-center">
+          <div class="mx-auto w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10">4</div>
+          <i data-lucide="calendar-check" class="w-5 h-5 text-fk-blue-soft mx-auto mt-3"></i>
+          <h3 class="mt-2 font-semibold text-ink-900">Control mensual</h3>
+          <p class="text-sm text-ink-500 mt-1">Primeros 3 meses</p>
+        </li>
+        <li class="text-center">
+          <div class="mx-auto w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10">5</div>
+          <i data-lucide="refresh-ccw" class="w-5 h-5 text-fk-blue-soft mx-auto mt-3"></i>
+          <h3 class="mt-2 font-semibold text-ink-900">Control trimestral</h3>
+          <p class="text-sm text-ink-500 mt-1">Según adherencia</p>
+        </li>
+      </ol>
+
+      <div class="mt-10 flex justify-center">
+        <div class="inline-flex items-center gap-2 bg-fk-blue-mist text-fk-blue text-sm font-medium px-5 py-2.5 rounded-full">
+          <i data-lucide="refresh-ccw" class="w-4 h-4"></i>
+          Feedback continuo a médico tratante
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section id="formulario" class="py-16 bg-bg-soft">
+  <div class="max-w-3xl mx-auto px-8">
+    <div class="text-center mb-8">
+      <p class="eyebrow">Solicitud de contacto</p>
+      <h2 class="h2 mt-2">Solicita contacto para ingresar al programa</h2>
+      <p class="text-ink-500 mt-3 max-w-xl mx-auto">
+        Complete los datos del paciente. Nuestro Contact Center se comunicará directamente en las próximas 24–48 horas.
+      </p>
+    </div>
+
+    <form id="derivacion-form" class="bg-white rounded-2xl p-8 lg:p-10 shadow-[var(--shadow-card)] border border-border-soft space-y-5" novalidate>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="nombre" class="block text-sm font-medium text-ink-900 mb-1.5">Nombre <span class="text-danger">*</span></label>
+          <input id="nombre" name="nombre" type="text" required minlength="2" class="form-input">
+          <p class="form-error hidden" data-error-for="nombre"></p>
+        </div>
+        <div>
+          <label for="apellido" class="block text-sm font-medium text-ink-900 mb-1.5">Apellido <span class="text-danger">*</span></label>
+          <input id="apellido" name="apellido" type="text" required minlength="2" class="form-input">
+          <p class="form-error hidden" data-error-for="apellido"></p>
+        </div>
+        <div>
+          <label for="rut" class="block text-sm font-medium text-ink-900 mb-1.5">RUT <span class="text-danger">*</span></label>
+          <input id="rut" name="rut" type="text" required placeholder="12.345.678-9" class="form-input">
+          <p class="form-error hidden" data-error-for="rut"></p>
+        </div>
+        <div>
+          <label for="telefono" class="block text-sm font-medium text-ink-900 mb-1.5">Teléfono <span class="text-danger">*</span></label>
+          <input id="telefono" name="telefono" type="tel" required placeholder="+56 9 1234 5678" class="form-input">
+          <p class="form-error hidden" data-error-for="telefono"></p>
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-ink-900 mb-1.5">Email <span class="text-danger">*</span></label>
+          <input id="email" name="email" type="email" required class="form-input">
+          <p class="form-error hidden" data-error-for="email"></p>
+        </div>
+        <div>
+          <label for="medico" class="block text-sm font-medium text-ink-900 mb-1.5">Médico que deriva <span class="text-danger">*</span></label>
+          <input id="medico" name="medico" type="text" required minlength="3" class="form-input">
+          <p class="form-error hidden" data-error-for="medico"></p>
+        </div>
+      </div>
+      <div>
+        <label for="comentarios" class="block text-sm font-medium text-ink-900 mb-1.5">Comentarios <span class="text-ink-400 font-normal">(opcional)</span></label>
+        <textarea id="comentarios" name="comentarios" rows="3" class="form-input resize-y"></textarea>
+      </div>
+
+      <p class="text-xs text-ink-500 leading-relaxed">
+        Al enviar este formulario, el paciente acepta ser contactado por el equipo del programa Ketosteril<sup>®</sup>.
+      </p>
+
+      <div class="pt-2 flex justify-center">
+        <button type="submit" id="submit-btn" class="inline-flex items-center gap-2 bg-fk-blue hover:bg-fk-blue-deep text-white font-semibold px-8 py-3.5 rounded-lg transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fk-blue focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed">
+          <span class="btn-label">Enviar solicitud</span>
+          <i data-lucide="loader-2" class="btn-spinner hidden w-4 h-4 animate-spin"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+<section id="que-incluye" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-12 items-center">
+    <div>
+      <p class="eyebrow">Programa</p>
+      <h2 class="h2 mt-2 mb-6">¿Qué incluye el programa?</h2>
+      <ul class="space-y-5">
+        <li class="flex gap-4">
+          <div class="shrink-0 w-11 h-11 rounded-full bg-fk-blue-mist text-fk-blue flex items-center justify-center">
+            <i data-lucide="apple" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-ink-900">Seguimiento Nutricional</h3>
+            <p class="text-ink-500 text-sm mt-0.5">Por Nutricionista Renal</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <div class="shrink-0 w-11 h-11 rounded-full bg-fk-blue-mist text-fk-blue flex items-center justify-center">
+            <i data-lucide="clipboard-list" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-ink-900">Plan de alimentación</h3>
+            <p class="text-ink-500 text-sm mt-0.5">Ajustado a las necesidades y contexto del paciente</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <div class="shrink-0 w-11 h-11 rounded-full bg-fk-blue-mist text-fk-blue flex items-center justify-center">
+            <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-ink-900">Acompañamiento continuo</h3>
+            <p class="text-ink-500 text-sm mt-0.5">Resolución de dudas del paciente y su familia</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <div class="shrink-0 w-11 h-11 rounded-full bg-fk-blue-mist text-fk-blue flex items-center justify-center">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-ink-900">Material educativo</h3>
+            <p class="text-ink-500 text-sm mt-0.5">Para apoyo en el tratamiento</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <div class="shrink-0 w-11 h-11 rounded-full bg-fk-blue-mist text-fk-blue flex items-center justify-center">
+            <i data-lucide="target" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-ink-900">Estrategias de adherencia</h3>
+            <p class="text-ink-500 text-sm mt-0.5">Para mejorar la continuidad al tratamiento</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="mt-8 inline-flex items-center gap-2 bg-fk-orange/10 text-fk-orange border border-fk-orange/30 text-sm font-semibold px-5 py-2.5 rounded-full">
+        <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+        Sin costo adicional para el paciente
+      </div>
+    </div>
+
+    <div class="bg-bg-soft rounded-2xl p-8 lg:p-12 flex items-center justify-center">
+      <img src="assets/ketosteril-product.jpeg"
+           alt="Caja del producto Ketosteril®"
+           class="max-w-sm w-full h-auto rounded-xl shadow-[var(--shadow-card)]">
+    </div>
+  </div>
+</section>
+    <section id="contact-center" class="py-16 bg-fk-blue text-white">
+  <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-12 items-center">
+    <div>
+      <p class="eyebrow" style="color: rgba(255,255,255,0.7);">Soporte continuo</p>
+      <h2 class="h2 mt-2 mb-3 text-white">Contact Center especializado</h2>
+      <p class="text-white/75 mb-8 max-w-xl">
+        Acompañamiento para una coordinación oportuna y cercana del paciente.
+      </p>
+
+      <ul class="space-y-3">
+        <li class="flex items-start gap-4 bg-white/10 border border-white/15 rounded-xl p-5">
+          <div class="shrink-0 w-11 h-11 rounded-lg bg-white/15 flex items-center justify-center">
+            <i data-lucide="calendar-plus" class="w-5 h-5 text-white"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white">Agendamiento de horas</h3>
+            <p class="text-white/70 text-sm mt-0.5">Coordinación directa con el paciente para fijar atenciones nutricionales.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4 bg-white/10 border border-white/15 rounded-xl p-5">
+          <div class="shrink-0 w-11 h-11 rounded-lg bg-white/15 flex items-center justify-center">
+            <i data-lucide="bell-ring" class="w-5 h-5 text-white"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white">Recordatorios de atenciones</h3>
+            <p class="text-white/70 text-sm mt-0.5">Avisos automatizados para no perder controles del programa.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4 bg-white/10 border border-white/15 rounded-xl p-5">
+          <div class="shrink-0 w-11 h-11 rounded-lg bg-white/15 flex items-center justify-center">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-white"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white">Confirmación de horas</h3>
+            <p class="text-white/70 text-sm mt-0.5">Verificación previa de cada atención agendada.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="text-center">
+      <p class="eyebrow" style="color: rgba(255,255,255,0.7);">Cobertura</p>
+      <h3 class="font-semibold text-white mt-2 mb-6">Cobertura nacional</h3>
+      <img src="assets/chile-map.svg" alt="Mapa de Chile con cobertura del programa" class="w-32 mx-auto opacity-95">
+      <div class="mt-6 inline-flex items-center gap-2 bg-success/15 text-success border border-success/30 text-sm font-semibold px-4 py-2 rounded-full" style="color: #34D399;">
+        <i data-lucide="check" class="w-4 h-4"></i>
+        Cobertura nacional activa
+      </div>
+    </div>
+  </div>
+</section>
+    <section id="beneficios" class="py-16 bg-bg-soft">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="text-center mb-10">
+      <p class="eyebrow">Evidencia clínica</p>
+      <h2 class="h2 mt-2">Beneficios para el paciente</h2>
+      <p class="text-ink-500 mt-3 max-w-2xl mx-auto">
+        Avalado por más de 25 estudios clínicos publicados en revistas de nefrología internacionales.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <article class="benefit-card bg-white rounded-2xl p-6 border border-border-soft transition-all duration-200">
+        <div class="w-12 h-12 rounded-xl bg-fk-blue-mist text-fk-blue flex items-center justify-center mb-4">
+          <i data-lucide="trending-down" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-bold text-ink-900 leading-snug">Retrasa la progresión</h3>
+        <p class="text-ink-500 text-sm mt-2 leading-relaxed">De la enfermedad renal crónica, retrasando el inicio de diálisis.</p>
+      </article>
+      <article class="benefit-card bg-white rounded-2xl p-6 border border-border-soft transition-all duration-200">
+        <div class="w-12 h-12 rounded-xl bg-fk-blue-mist text-fk-blue flex items-center justify-center mb-4">
+          <i data-lucide="shield-check" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-bold text-ink-900 leading-snug">Reduce el riesgo</h3>
+        <p class="text-ink-500 text-sm mt-2 leading-relaxed">De complicaciones clínicas asociadas a la insuficiencia renal.</p>
+      </article>
+      <article class="benefit-card bg-white rounded-2xl p-6 border border-border-soft transition-all duration-200">
+        <div class="w-12 h-12 rounded-xl bg-fk-blue-mist text-fk-blue flex items-center justify-center mb-4">
+          <i data-lucide="activity" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-bold text-ink-900 leading-snug">Mejora la adherencia</h3>
+        <p class="text-ink-500 text-sm mt-2 leading-relaxed">Y los resultados clínicos a través del seguimiento estructurado.</p>
+      </article>
+      <article class="benefit-card bg-white rounded-2xl p-6 border border-border-soft transition-all duration-200">
+        <div class="w-12 h-12 rounded-xl bg-fk-blue-mist text-fk-blue flex items-center justify-center mb-4">
+          <i data-lucide="heart" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-bold text-ink-900 leading-snug">Apoya y orienta</h3>
+        <p class="text-ink-500 text-sm mt-2 leading-relaxed">Al paciente y su familia durante el tratamiento.</p>
+      </article>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer id="footer" class="bg-fk-blue text-white pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 pb-10 border-b border-white/15">
+      <div class="col-span-2 lg:col-span-1">
+        <img src="assets/fresenius-kabi-official.png"
+             alt="Fresenius Kabi"
+             class="h-12 w-auto filter-white mb-3">
+        <p class="text-white/70 text-sm italic">caring for life</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-3 text-sm">Ketosteril®</h4>
+        <p class="text-white/70 text-sm leading-relaxed">Aminoácidos y/o cetoanálogos</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-3 text-sm">El programa</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#como-funciona" class="text-white/70 hover:text-white transition-colors duration-200">¿Cómo funciona?</a></li>
+          <li><a href="#que-incluye" class="text-white/70 hover:text-white transition-colors duration-200">¿Qué incluye?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-3 text-sm">Para pacientes</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#que-incluye" class="text-white/70 hover:text-white transition-colors duration-200">Consejos y herramientas</a></li>
+          <li><a href="#beneficios" class="text-white/70 hover:text-white transition-colors duration-200">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-3 text-sm">Recursos</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#beneficios" class="text-white/70 hover:text-white transition-colors duration-200">Material educativo</a></li>
+          <li><a href="#beneficios" class="text-white/70 hover:text-white transition-colors duration-200">Información clínica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-3 text-sm">Contacto</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#formulario" class="text-white/70 hover:text-white transition-colors duration-200">Solicitar contacto</a></li>
+          <li><a href="#contact-center" class="text-white/70 hover:text-white transition-colors duration-200">Contact Center</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-white/60">
+      <p class="max-w-3xl leading-relaxed">
+        Material dirigido a profesionales de la salud. Ketosteril® es un alimento para propósitos médicos especiales. Usar bajo supervisión médica.
+        © 2026 Fresenius Kabi Chile. Todos los derechos reservados.
+      </p>
+      <div class="flex items-center gap-3">
+        <span class="text-white/70">Síguenos</span>
+        <a href="#" aria-label="LinkedIn de Fresenius Kabi" class="w-9 h-9 rounded-full border border-white/25 flex items-center justify-center hover:bg-white/10 transition-colors duration-200">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div id="success-modal" class="hidden fixed inset-0 z-[100] items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop absolute inset-0 bg-ink-900/60 backdrop-blur-sm"></div>
+    <div class="modal-card relative bg-white rounded-2xl shadow-[var(--shadow-elevated)] max-w-md w-full p-8 text-center">
+      <div class="mx-auto w-14 h-14 rounded-full bg-success/10 text-success flex items-center justify-center mb-4">
+        <i data-lucide="check" class="w-7 h-7"></i>
+      </div>
+      <h3 id="modal-title" class="text-xl font-bold text-ink-900">Solicitud enviada con éxito</h3>
+      <p class="text-ink-500 mt-2 leading-relaxed">
+        Nuestro Contact Center contactará al paciente en las próximas <strong class="text-ink-900">24–48 horas</strong>.
+      </p>
+      <button type="button" id="modal-close" class="mt-6 inline-flex items-center justify-center bg-fk-blue hover:bg-fk-blue-deep text-white font-semibold px-6 py-2.5 rounded-lg transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fk-blue focus-visible:ring-offset-2">
+        Cerrar
+      </button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

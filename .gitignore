@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Claude Code local settings
+.claude/
+
+# Superpowers brainstorm session artifacts
+.superpowers/
+
+# Unused legacy asset crops (kept locally for reference, not deployed)
+assets/fresenius-kabi-footer.png
+assets/fresenius-kabi-logo-cropped.png
+assets/fresenius-kabi-logo.png
+assets/ketosteril-logo-cropped.png
+assets/ketosteril-wordmark.png
+
+# Editor / OS
+*.swp
+*.swo
+Thumbs.db
