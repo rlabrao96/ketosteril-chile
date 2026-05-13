@@ -103,42 +103,69 @@
       Un flujo simple de cinco pasos desde la prescripción hasta el seguimiento continuo.
     </p>
 
-    <div class="stepper relative">
-      <div class="stepper-line absolute top-7 left-0 right-0 h-0.5 bg-border-soft" aria-hidden="true">
-        <div class="stepper-line-fill h-full bg-fk-blue transition-[width] duration-1000 ease-out" style="width:0%"></div>
+    <div class="stepper">
+      <div class="relative">
+        <!-- Desktop horizontal line -->
+        <div class="hidden lg:block absolute top-7 left-0 right-0 h-0.5 bg-border-soft" aria-hidden="true">
+          <div class="stepper-fill-h h-full bg-fk-blue transition-[width] duration-1000 ease-out" style="width:0%"></div>
+        </div>
+        <!-- Mobile vertical line -->
+        <div class="lg:hidden absolute left-7 top-7 bottom-7 w-0.5 bg-border-soft" aria-hidden="true">
+          <div class="stepper-fill-v w-full bg-fk-blue transition-[height] duration-1000 ease-out" style="height:0%"></div>
+        </div>
+        <ol class="relative flex flex-col gap-7 lg:grid lg:grid-cols-5 lg:gap-4">
+          <li class="flex items-start gap-5 lg:block lg:gap-0 lg:text-center">
+            <div class="shrink-0 w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10 lg:mx-auto">1</div>
+            <div class="flex-1 min-w-0 lg:flex-none">
+              <div class="flex items-center gap-2 lg:block lg:mt-3">
+                <i data-lucide="file-pen-line" class="w-5 h-5 text-fk-blue-soft shrink-0 lg:block lg:mx-auto"></i>
+                <h3 class="font-semibold text-ink-900 lg:mt-2">Prescripción</h3>
+              </div>
+              <p class="text-sm text-ink-500 mt-1">Del médico tratante</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-5 lg:block lg:gap-0 lg:text-center">
+            <div class="shrink-0 w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10 lg:mx-auto">2</div>
+            <div class="flex-1 min-w-0 lg:flex-none">
+              <div class="flex items-center gap-2 lg:block lg:mt-3">
+                <i data-lucide="users" class="w-5 h-5 text-fk-blue-soft shrink-0 lg:block lg:mx-auto"></i>
+                <h3 class="font-semibold text-ink-900 lg:mt-2">Derivación</h3>
+              </div>
+              <p class="text-sm text-ink-500 mt-1">A Especialista / Contact Center</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-5 lg:block lg:gap-0 lg:text-center">
+            <div class="shrink-0 w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10 lg:mx-auto">3</div>
+            <div class="flex-1 min-w-0 lg:flex-none">
+              <div class="flex items-center gap-2 lg:block lg:mt-3">
+                <i data-lucide="clipboard-list" class="w-5 h-5 text-fk-blue-soft shrink-0 lg:block lg:mx-auto"></i>
+                <h3 class="font-semibold text-ink-900 lg:mt-2">Evaluación Nutricional</h3>
+              </div>
+              <p class="text-sm text-ink-500 mt-1">Por Nutricionista Renal</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-5 lg:block lg:gap-0 lg:text-center">
+            <div class="shrink-0 w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10 lg:mx-auto">4</div>
+            <div class="flex-1 min-w-0 lg:flex-none">
+              <div class="flex items-center gap-2 lg:block lg:mt-3">
+                <i data-lucide="calendar-check" class="w-5 h-5 text-fk-blue-soft shrink-0 lg:block lg:mx-auto"></i>
+                <h3 class="font-semibold text-ink-900 lg:mt-2">Control mensual</h3>
+              </div>
+              <p class="text-sm text-ink-500 mt-1">Primeros 3 meses</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-5 lg:block lg:gap-0 lg:text-center">
+            <div class="shrink-0 w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10 lg:mx-auto">5</div>
+            <div class="flex-1 min-w-0 lg:flex-none">
+              <div class="flex items-center gap-2 lg:block lg:mt-3">
+                <i data-lucide="refresh-ccw" class="w-5 h-5 text-fk-blue-soft shrink-0 lg:block lg:mx-auto"></i>
+                <h3 class="font-semibold text-ink-900 lg:mt-2">Control trimestral</h3>
+              </div>
+              <p class="text-sm text-ink-500 mt-1">Según adherencia</p>
+            </div>
+          </li>
+        </ol>
       </div>
-      <ol class="relative grid grid-cols-5 gap-4">
-        <li class="text-center">
-          <div class="mx-auto w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10">1</div>
-          <i data-lucide="file-pen-line" class="w-5 h-5 text-fk-blue-soft mx-auto mt-3"></i>
-          <h3 class="mt-2 font-semibold text-ink-900">Prescripción</h3>
-          <p class="text-sm text-ink-500 mt-1">Del médico tratante</p>
-        </li>
-        <li class="text-center">
-          <div class="mx-auto w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10">2</div>
-          <i data-lucide="users" class="w-5 h-5 text-fk-blue-soft mx-auto mt-3"></i>
-          <h3 class="mt-2 font-semibold text-ink-900">Derivación</h3>
-          <p class="text-sm text-ink-500 mt-1">A Especialista / Contact Center</p>
-        </li>
-        <li class="text-center">
-          <div class="mx-auto w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10">3</div>
-          <i data-lucide="clipboard-list" class="w-5 h-5 text-fk-blue-soft mx-auto mt-3"></i>
-          <h3 class="mt-2 font-semibold text-ink-900">Evaluación Nutricional</h3>
-          <p class="text-sm text-ink-500 mt-1">Por Nutricionista Renal</p>
-        </li>
-        <li class="text-center">
-          <div class="mx-auto w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10">4</div>
-          <i data-lucide="calendar-check" class="w-5 h-5 text-fk-blue-soft mx-auto mt-3"></i>
-          <h3 class="mt-2 font-semibold text-ink-900">Control mensual</h3>
-          <p class="text-sm text-ink-500 mt-1">Primeros 3 meses</p>
-        </li>
-        <li class="text-center">
-          <div class="mx-auto w-14 h-14 rounded-full bg-fk-blue-mist border-2 border-fk-blue text-fk-blue flex items-center justify-center font-bold text-lg relative z-10">5</div>
-          <i data-lucide="refresh-ccw" class="w-5 h-5 text-fk-blue-soft mx-auto mt-3"></i>
-          <h3 class="mt-2 font-semibold text-ink-900">Control trimestral</h3>
-          <p class="text-sm text-ink-500 mt-1">Según adherencia</p>
-        </li>
-      </ol>
 
       <div class="mt-10 flex justify-center">
         <div class="inline-flex items-center gap-2 bg-fk-blue-mist text-fk-blue text-sm font-medium px-5 py-2.5 rounded-full">
