@@ -1,4 +1,12 @@
 // Ketosteril Landing — Interactive behavior
+
+// ── Google Apps Script Web App URL ───────────────────────────
+// Pega aquí la URL del Web App después de desplegarlo.
+// Mientras sea el placeholder, el formulario funciona en modo demo.
+var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzONzhGpNOC1btaTiF3BU0cQKllkNhHdC00Y6as1EnaqF_kadDqEelEiBbmSSye7sDP/exec';
+var DEMO_MODE = (APPS_SCRIPT_URL === 'PASTE_YOUR_WEB_APP_URL_HERE');
+// ─────────────────────────────────────────────────────────────
+
 document.addEventListener('DOMContentLoaded', () => {
   if (window.lucide) lucide.createIcons();
   console.log('[Ketosteril] Landing page loaded');
@@ -187,28 +195,66 @@ form?.addEventListener('submit', (e) => {
   label.textContent = 'Enviando…';
   spinner.classList.remove('hidden');
 
-  setTimeout(() => {
-    const data = Object.fromEntries(new FormData(form).entries());
-    const payload = {
-      paciente: {
-        nombre: data.nombre.trim(),
-        apellido: data.apellido.trim(),
-        rut: data.rut.trim(),
-        telefono: data.telefono.trim(),
-        email: data.email.trim()
-      },
-      derivacion: {
-        medico: data.medico.trim(),
-        comentarios: data.comentarios?.trim() || null,
-        timestamp: new Date().toISOString()
-      }
-    };
-    console.log('[Ketosteril DEMO] Payload que se enviaría al Contact Center:', payload);
+  const data = Object.fromEntries(new FormData(form).entries());
+  const payload = {
+    nombre:      data.nombre.trim(),
+    apellido:    data.apellido.trim(),
+    rut:         data.rut.trim(),
+    telefono:    data.telefono.trim(),
+    email:       data.email.trim(),
+    medico:      data.medico.trim(),
+    comentarios: data.comentarios?.trim() || ''
+  };
 
-    form.reset();
+  function restoreButton() {
     submitBtn.disabled = false;
     label.textContent = 'Enviar solicitud';
     spinner.classList.add('hidden');
+  }
+
+  function showSubmitError(message) {
+    let banner = form.querySelector('#submit-error-banner');
+    if (!banner) {
+      banner = document.createElement('p');
+      banner.id = 'submit-error-banner';
+      banner.className = 'form-error text-center';
+      submitBtn.closest('div').insertAdjacentElement('beforebegin', banner);
+    }
+    banner.textContent = message;
+    banner.classList.remove('hidden');
+  }
+
+  function clearSubmitError() {
+    const banner = form.querySelector('#submit-error-banner');
+    if (banner) banner.classList.add('hidden');
+  }
+
+  if (DEMO_MODE) {
+    console.log('[Ketosteril DEMO] Payload que se enviaría:', payload);
+    setTimeout(() => {
+      restoreButton();
+      clearSubmitError();
+      form.reset();
+      openModal();
+    }, 800);
+    return;
+  }
+
+  fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(() => {
+    restoreButton();
+    clearSubmitError();
+    form.reset();
     openModal();
-  }, 800);
+  })
+  .catch((err) => {
+    console.error('[Ketosteril] Error de red:', err);
+    restoreButton();
+    showSubmitError('No se pudo enviar la solicitud. Verifica tu conexión e inténtalo nuevamente.');
+  });
 });
