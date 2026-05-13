@@ -15,7 +15,9 @@ Owner: Rafael Labra (`rafaellabra96@gmail.com`). Internal stakeholder: Tamara (p
 - Language: **Spanish** throughout (UI copy and forms). Identifiers in code can be English.
 - Target: **desktop-first**, with responsive mobile fallback (stepper has a vertical-timeline mobile variant).
 - Deploy: **Vercel** auto-deploys from `main` branch of `https://github.com/rlabrao96/ketosteril-chile`.
-- Form submission is **mocked**: validation client-side, payload logged to console, then a success modal appears. No fetch/API call.
+- Form submission sends data to a **Google Apps Script Web App** which appends a row to a Google Sheet in Tamara's Drive. Validation is client-side; the fetch uses `mode: 'no-cors'` with `Content-Type: text/plain` (required for Apps Script compatibility). On success: modal. On network error: red banner above submit button.
+- The Apps Script URL is stored in `script.js` as `APPS_SCRIPT_URL`. If it equals the placeholder string, `DEMO_MODE` is `true` and submission falls back to the old console-log mock.
+- **Google Sheet:** "Derivaciones Ketosteril" in Tamara's Google Drive. Columns: Fecha y hora, Nombre, Apellido, RUT, Teléfono, Email, Médico que deriva, Comentarios. Header row is created automatically on first submission (or via `crearEncabezados()` function in Apps Script).
 
 ## File map
 
