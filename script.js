@@ -151,7 +151,7 @@ function validateForm() {
     valid = false;
   } else setFieldError('telefono', '');
 
-  if (!data.email || !validateEmail(data.email)) {
+  if (data.email && !validateEmail(data.email)) {
     setFieldError('email', 'Ingresa un email válido');
     valid = false;
   } else setFieldError('email', '');
@@ -208,7 +208,7 @@ form?.addEventListener('submit', (e) => {
 
   function restoreButton() {
     submitBtn.disabled = false;
-    label.textContent = 'Enviar solicitud';
+    label.textContent = 'Enviar derivación';
     spinner.classList.add('hidden');
   }
 
